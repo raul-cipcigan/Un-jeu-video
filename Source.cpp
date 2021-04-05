@@ -66,7 +66,7 @@ int main() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow(800, 800, "Essai", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(800, 800, "Un jeu video", NULL, NULL);
 	if (window == NULL) {
 		std::cout << "GLFW ne s'est pas intialise :(\n";
 		glfwTerminate();
