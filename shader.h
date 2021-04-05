@@ -100,7 +100,7 @@ private:
 			if (!success)
 			{
 				glGetShaderInfoLog(shader, 1024, NULL, infoLog);
-				std::cout << "Ce shader n'a pas fonctionné: " << type << "\n\n:(\n\n" << infoLog << std::endl;
+				std::cout << "Ce shader n'a pas fonctionne: " << type << "\n\n:(\n\n" << infoLog << std::endl;
 			}
 		}
 		else
@@ -109,7 +109,7 @@ private:
 			if (!success)
 			{
 				glGetProgramInfoLog(shader, 1024, NULL, infoLog);
-				std::cout << "Les shaders n'ont pas pu être connectés: " << type << "\n\n:(\n\n" << infoLog << std::endl;
+				std::cout << "Les shaders n'ont pas pu être connectes: " << type << "\n\n:(\n\n" << infoLog << std::endl;
 			}
 		}
 	}

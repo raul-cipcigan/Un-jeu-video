@@ -54,7 +54,7 @@ int main() {
 
 	int difficulty;
 
-	std::cout << "Choisissez une difficulté entre 1 et 3: ";
+	std::cout << "Choisissez une difficulte entre 1 et 3: ";
 	std::cin >> difficulty;
 	while (difficulty > 3 || difficulty < 1) {
 		std::cout << "Le nombre est trop petit ou trop grand.\n\nChoissisez un autre: ";
@@ -68,7 +68,7 @@ int main() {
 
 	GLFWwindow* window = glfwCreateWindow(800, 800, "Essai", NULL, NULL);
 	if (window == NULL) {
-		std::cout << "GLFW ne s'est pas intialisé :(\n";
+		std::cout << "GLFW ne s'est pas intialise :(\n";
 		glfwTerminate();
 		return -1;
 	}
@@ -77,7 +77,7 @@ int main() {
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-		std::cout << "GLAD ne s'est pas initialisé :(\n";
+		std::cout << "GLAD ne s'est pas initialise :(\n";
 		return -1;
 	}
 
@@ -204,7 +204,7 @@ int main() {
 				wait = 15;
 				for (int i = 0; i <= difficulty + 1; i++) {
 					alreadyMoved[i] = false;
-					std::cout << "Réinitialisé ennemi " << i << "\n";
+					std::cout << "Reinitialise ennemi " << i << "\n";
 				}
 			}
 			else if (glfwGetKey(window, GLFW_KEY_KP_2) == GLFW_PRESS && transY > -0.8f && wait == 0) {
@@ -212,7 +212,7 @@ int main() {
 					wait = 15;
 					for (int i = 0; i <= difficulty + 1; i++) {
 						alreadyMoved[i] = false;
-							std::cout << "Réinitialisé ennemi " << i << "\n";
+							std::cout << "Reinitialise ennemi " << i << "\n";
 					}
 			}
 			else if (glfwGetKey(window, GLFW_KEY_KP_4) == GLFW_PRESS && transX > -0.8f && wait == 0) {
@@ -220,7 +220,7 @@ int main() {
 					wait = 15;
 					for (int i = 0; i <= difficulty + 1; i++) {
 						alreadyMoved[i] = false;
-						std::cout << "Réinitialisé ennemi " << i << "\n";
+						std::cout << "Reinitialise ennemi " << i << "\n";
 					}
 			}
 			else if (glfwGetKey(window, GLFW_KEY_KP_6) == GLFW_PRESS && transX < 0.8f && wait == 0) {
@@ -228,14 +228,14 @@ int main() {
 				wait = 15;
 				for (int i = 0; i <= difficulty + 1; i++) {
 					alreadyMoved[i] = false;
-					std::cout << "Réinitialisé ennemi " << i << "\n";
+					std::cout << "Reinitialise ennemi " << i << "\n";
 				}
 			}
 			else if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && wait == 0) {
 				wait = 15;
 				for (int i = 0; i <= difficulty + 1; i++) {
 					alreadyMoved[i] = false;
-					std::cout << "Réinitialisé ennemi " << i << "\n";
+					std::cout << "Reinitialise ennemi " << i << "\n";
 				}
 			}
 			else if (glfwGetKey(window, GLFW_KEY_KP_9) == GLFW_PRESS && transX < 0.8f && transY < 0.8f && wait == 0) {
@@ -244,7 +244,7 @@ int main() {
 				wait = 15;
 				for (int i = 0; i <= difficulty + 1; i++) {
 					alreadyMoved[i] = false;
-					std::cout << "Réinitialisé ennemi " << i << "\n";
+					std::cout << "Reinitialise ennemi " << i << "\n";
 				}
 			}
 			else if (glfwGetKey(window, GLFW_KEY_KP_7) == GLFW_PRESS && transX > -0.8f && transY < 0.8f && wait == 0) {
@@ -253,7 +253,7 @@ int main() {
 				wait = 15;
 				for (int i = 0; i <= difficulty + 1; i++) {
 					alreadyMoved[i] = false;
-					std::cout << "Réinitialisé ennemi " << i << "\n";
+					std::cout << "Reinitialise ennemi " << i << "\n";
 				}
 			}
 			else if (glfwGetKey(window, GLFW_KEY_KP_3) == GLFW_PRESS && transX < 0.8f && transY > -0.8f && wait == 0) {
@@ -262,7 +262,7 @@ int main() {
 				wait = 15;
 				for (int i = 0; i <= difficulty + 1; i++) {
 					alreadyMoved[i] = false;
-					std::cout << "Réinitialisé ennemi " << i << "\n";
+					std::cout << "Reinitialise ennemi " << i << "\n";
 				}
 			}
 			else if (glfwGetKey(window, GLFW_KEY_KP_1) == GLFW_PRESS && transX > -0.8f && transY > -0.8f && wait == 0) {
@@ -271,7 +271,7 @@ int main() {
 				wait = 15;
 				for (int i = 0; i <= difficulty + 1; i++) {
 					alreadyMoved[i] = false;
-					std::cout << "Réinitialisé ennemi " << i << "\n";
+					std::cout << "Reinitialise ennemi " << i << "\n";
 				}
 			}
 			else if (wait > 0) {

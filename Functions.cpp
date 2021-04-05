@@ -41,7 +41,7 @@ void prepGrid(std::vector<unsigned int>& vbo, std::vector<unsigned int>& ebo, st
 		glGetBufferParameteriv(GL_ARRAY_BUFFER, GL_BUFFER_SIZE, &bsize);
 
 		if (bsize == 0) {
-			std::cout << "Le mémoire tampon n'a pas fonctionné :(";
+			std::cout << "Le memoire tampon n'a pas fonctionne :(";
 		}
 
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo[i]);
@@ -149,7 +149,7 @@ void spawnEnemy(float transX, float transY, std::vector<float>& x, std::vector<f
 		}
 		break;
 	default:
-		std::cout << "Le nombre d'ennemis est brisé :(";
+		std::cout << "Le nombre d'ennemis est brise :(";
 		break;
 	}
 
@@ -202,7 +202,7 @@ void prepEnemy(std::vector<unsigned int>& vbo, std::vector<unsigned int>& ebo, s
 		glGetBufferParameteriv(GL_ARRAY_BUFFER, GL_BUFFER_SIZE, &bsize);
 
 		if (bsize == 0) {
-			std::cout << "Le mémoire tampon n'a pas fonctionné :(";
+			std::cout << "Le memoire tampon n'a pas fonctionne :(";
 		}
 
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo[i]);
@@ -227,24 +227,24 @@ void moveEnemy(std::vector<float>& x, std::vector<float>& y, bool& life, float t
 				if (x[i] > transX) {
 					x[i] -= 0.2f;
 					done[i] = true;
-					std::cout << "Ennemi " << i << " s'est déplacé vers la gauche\n";
+					std::cout << "Ennemi " << i << " s'est deplace vers la gauche\n";
 				}
 				else if (x[i] < transX) {
 					x[i] += 0.2f;
 					done[i] = true;
-					std::cout << "Ennemi " << i << " s'est déplacé vers la droite\n";
+					std::cout << "Ennemi " << i << " s'est deplace vers la droite\n";
 				}
 			}
 			else if (abs(y[i] - transY) < abs(x[i] - transX) && !(y[i] <= transY + 0.1 && y[i] >= transY - 0.1) && !(x[i] <= transX + 0.1 && x[i] >= transX - 0.1) && !done[i] && life1[i]) {
 				if (y[i] > transY) {
 					y[i] -= 0.2f;
 					done[i] = true;
-					std::cout << "Ennemi " << i << " s'est déplacé vers le bas\n";
+					std::cout << "Ennemi " << i << " s'est deplace vers le bas\n";
 				}
 				else if (y[i] < transY) {
 					y[i] += 0.2f;
 					done[i] = true;
-					std::cout << "Ennemi " << i << " s'est déplacé vers le haut\n";
+					std::cout << "Ennemi " << i << " s'est deplace vers le haut\n";
 				}
 			}
 			else if (((x[i] <= transX + 0.1 && x[i] >= transX - 0.1) || (y[i] <= transY + 0.1 && y[i] >= transY - 0.1)) && !done[i] && life1[i] && !recentKill) {
@@ -255,7 +255,7 @@ void moveEnemy(std::vector<float>& x, std::vector<float>& y, bool& life, float t
 				std::cout << "Vaincu par ennemi " << i << "\n\n";
 			}
 			else if (life1[i] && recentKill) {
-				std::cout << i << " a sauté leur tour\n";
+				std::cout << i << " a saute leur tour\n";
 			}
 		}
 		std::cout << "\n";
