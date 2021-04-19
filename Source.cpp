@@ -84,19 +84,19 @@ int main() {
 	srand(seed);
 
 	shader boardShader;
-	boardShader.startShader("C:/Users/Raulc/source/repos/Un jeu video/vertexShader.glsl", "C:/Users/Raulc/source/repos/Un jeu video/fragmentShader.glsl");
+	boardShader.startShader("vertexShader.glsl", "fragmentShader.glsl");
 	shader playerShader;
-	playerShader.startShader("C:/Users/Raulc/source/repos/Un jeu video/movingVertexShader.glsl", "C:/Users/Raulc/source/repos/Un jeu video/fragmentShader.glsl");
+	playerShader.startShader("movingVertexShader.glsl", "fragmentShader.glsl");
 	shader enemy1;
-	enemy1.startShader("C:/Users/Raulc/source/repos/Un jeu video/movingVertexShader.glsl", "C:/Users/Raulc/source/repos/Un jeu video/fragmentShader.glsl");
+	enemy1.startShader("movingVertexShader.glsl", "fragmentShader.glsl");
 	shader enemy2;
-	enemy2.startShader("C:/Users/Raulc/source/repos/Un jeu video/movingVertexShader.glsl", "C:/Users/Raulc/source/repos/Un jeu video/fragmentShader.glsl");
+	enemy2.startShader("movingVertexShader.glsl", "fragmentShader.glsl");
 	shader enemy3;
-	enemy3.startShader("C:/Users/Raulc/source/repos/Un jeu video/movingVertexShader.glsl", "C:/Users/Raulc/source/repos/Un jeu video/fragmentShader.glsl");
+	enemy3.startShader("movingVertexShader.glsl", "fragmentShader.glsl");
 	shader enemy4;
-	enemy4.startShader("C:/Users/Raulc/source/repos/Un jeu video/movingVertexShader.glsl", "C:/Users/Raulc/source/repos/Un jeu video/fragmentShader.glsl");
+	enemy4.startShader("movingVertexShader.glsl", "fragmentShader.glsl");
 	shader enemy5;
-	enemy5.startShader("C:/Users/Raulc/source/repos/Un jeu video/movingVertexShader.glsl", "C:/Users/Raulc/source/repos/Un jeu video/fragmentShader.glsl");
+	enemy5.startShader("movingVertexShader.glsl", "fragmentShader.glsl");
 
 	unsigned int playerTransformLoc = glGetUniformLocation(playerShader.ID, "transform");
 	unsigned int enemyLoc[5];
