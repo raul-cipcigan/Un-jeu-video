@@ -223,7 +223,7 @@ void prepEnemy(std::vector<unsigned int>& vbo, std::vector<unsigned int>& ebo, s
 void moveEnemy(std::vector<float>& x, std::vector<float>& y, bool& life, float transX, float transY, int wait, std::vector<bool>& life1, std::vector<bool>& done, bool& recentKill, int enemynum) {
 	if (wait == 7 && life == true) {
 		for (int i = 0; i < enemynum; i++) {
-			if (abs(x[i] - transX) < abs(y[i] - transY) && !(x[i] <= transX + 0.1 && x[i] >= transX - 0.1) && !(y[i] <= transY + 0.1 && y[i] >= transY - 0.1) && !done[i] && life1[i]) {
+			if (abs(x[i] - transX) <= abs(y[i] - transY) && !(x[i] <= transX + 0.1 && x[i] >= transX - 0.1) && !(y[i] <= transY + 0.1 && y[i] >= transY - 0.1) && !done[i] && life1[i]) {
 				if (x[i] > transX) {
 					x[i] -= 0.2f;
 					done[i] = true;
@@ -255,7 +255,7 @@ void moveEnemy(std::vector<float>& x, std::vector<float>& y, bool& life, float t
 				std::cout << "Vaincu par ennemi " << i + 1 << "\n\n";
 			}
 			else if (life1[i] && recentKill) {
-				std::cout << i + 1 << " a saute leur tour\n";
+				std::cout << "Ennemi " << i + 1 << " a saute leur tour\n";
 			}
 		}
 		std::cout << "\n";
