@@ -227,24 +227,24 @@ void moveEnemy(std::vector<float>& x, std::vector<float>& y, bool& life, float t
 				if (x[i] > transX) {
 					x[i] -= 0.2f;
 					done[i] = true;
-					std::cout << "Ennemi " << i << " s'est deplace vers la gauche\n";
+					std::cout << "Ennemi " << i + 1 << " s'est deplace vers la gauche\n";
 				}
 				else if (x[i] < transX) {
 					x[i] += 0.2f;
 					done[i] = true;
-					std::cout << "Ennemi " << i << " s'est deplace vers la droite\n";
+					std::cout << "Ennemi " << i + 1 << " s'est deplace vers la droite\n";
 				}
 			}
 			else if (abs(y[i] - transY) < abs(x[i] - transX) && !(y[i] <= transY + 0.1 && y[i] >= transY - 0.1) && !(x[i] <= transX + 0.1 && x[i] >= transX - 0.1) && !done[i] && life1[i]) {
 				if (y[i] > transY) {
 					y[i] -= 0.2f;
 					done[i] = true;
-					std::cout << "Ennemi " << i << " s'est deplace vers le bas\n";
+					std::cout << "Ennemi " << i + 1 << " s'est deplace vers le bas\n";
 				}
 				else if (y[i] < transY) {
 					y[i] += 0.2f;
 					done[i] = true;
-					std::cout << "Ennemi " << i << " s'est deplace vers le haut\n";
+					std::cout << "Ennemi " << i + 1 << " s'est deplace vers le haut\n";
 				}
 			}
 			else if (((x[i] <= transX + 0.1 && x[i] >= transX - 0.1) || (y[i] <= transY + 0.1 && y[i] >= transY - 0.1)) && !done[i] && life1[i] && !recentKill) {
@@ -252,10 +252,10 @@ void moveEnemy(std::vector<float>& x, std::vector<float>& y, bool& life, float t
 				for (int j = 0; j <= 4; j++) {
 					done[j] = true;
 				}
-				std::cout << "Vaincu par ennemi " << i << "\n\n";
+				std::cout << "Vaincu par ennemi " << i + 1 << "\n\n";
 			}
 			else if (life1[i] && recentKill) {
-				std::cout << i << " a saute leur tour\n";
+				std::cout << i + 1 << " a saute leur tour\n";
 			}
 		}
 		std::cout << "\n";

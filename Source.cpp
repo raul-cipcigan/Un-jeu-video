@@ -311,7 +311,7 @@ int main() {
 				respawnCooldown[i] = 10;
 				enemyIsAlive[i] = false;
 				recentKill = true;
-				std::cout << "Vaincu ennemi " << i << "!\n";
+				std::cout << "Vaincu ennemi " << i + 1 << "!\n";
 			}
 		}
 
